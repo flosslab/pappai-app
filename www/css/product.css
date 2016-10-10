@@ -1,0 +1,182 @@
+.nav-bar-block, .bar {
+    background-color: #fff !important;
+}
+
+a.right-arrow.button.icon.icon-right.ion-chevron-right {
+    float: right;
+}
+
+.product-view ion-content {
+    padding: 0 !important;
+}
+.row.no-padding, .row.no-padding .product-image {
+    padding: 0 !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#product-image {
+    border: 1px solid black;
+}
+
+img {
+    /* elimina la riga bianca presente in basso, tra la foto e il bordo */
+    vertical-align: bottom
+}
+
+.title-color {
+    color: #F5F8B1 !important;
+}
+
+#product-mark {
+    padding-top: 10px;
+}
+
+.item.item-body {
+    border: 0 !important;
+}
+.product-name {
+    font-size: large !important;
+    font-weight: bold !important;
+    padding: 0 20px !important;
+    color: #a81100 !important;
+    border: 0 !important;
+    margin-top:10px !important;
+}
+
+.name-2 {
+    margin-left:0 !important;
+    padding-left:0 !important;
+}
+
+.elenco-ingr {
+    margin-left: 10px !important;
+}
+
+.product-info {
+    color: #666 !important;
+    font-size: medium !important;
+    padding: 10px 16px !important;
+}
+.product-info h5 {
+    display: inline;
+    color: #a81100 !important;
+    text-transform: uppercase;
+}
+
+.product-info span {
+    text-align: justify;
+}
+
+.product-ingr {
+    color: #666 !important;
+    font-size: medium !important;
+    padding: 0 !important;
+}
+.product-ingr h4 {
+    display: inline;
+    color: #a81100 !important;
+    text-transform: uppercase;
+    line-height: 40px !important;
+}
+
+.descrizione-ricetta{
+    padding-bottom: 20px;
+}
+
+.icona-ingredienti {
+    width: 25px;
+    float: left;
+    display: inline;
+    line-height: 30px;
+    margin: 10px 10px 0 0;
+}
+
+/* Allergie */
+
+.allergie-prodotto ion-item{
+    border: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.allergie-label{
+    float: left;
+    display: inline;
+}
+
+.allergie-prodotto .indicatore {
+    height: 25px;
+    line-height: 25px;
+    width:25px;
+    float:right;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.dettaglio-prodotto .title {
+    line-height: 30px !important;
+    white-space: normal !important;
+}
+
+.Presenza {
+    background-color:#a81100;
+}
+
+.Tracce {
+    background-color:#b5832c;
+}
+
+.product-ricetta {
+    border-bottom: 1px solid #ccc;
+    margin-bottom:10px;
+}
+
+.product-ricetta .label-ricetta {
+    color:#b5832c;
+}
+
+
+.allergie-prodotto .item-allergene{
+    border-bottom: 1px solid #666 !important;
+}
+.selected {
+    font-weight: bold !important;
+    background-color: #F2F2F2;
+}
+
+/* Frecce per swipe */
+.right-arrow {
+    position: absolute;
+    top:50% !important;
+    right: 1px !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50% !important;
+    left: 1px !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.lateral-padding {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+}
+.right-padding {
+     padding-right: 8% !important;
+ }
+
+.left-padding {
+    padding-left: 8% !important;
+}
+
+.full-image {
+    max-width: 540px !important;
+}

@@ -1,0 +1,88 @@
+<html ng-app="starter">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <title>Titolo</title>
+    <!--<link href="../js/ionic-v1.0.1/css/ionic.css" rel="stylesheet">-->
+    <link href="../scss/app.css" rel="stylesheet">
+    <link href="../css/product.css" rel="stylesheet">
+    <script src="../libs/ionic-v1.0.1/js/ionic.bundle.js"></script>
+    <script src="../js/swipe.js"></script>
+</head>
+
+<body>
+
+<ion-nav-bar class="bar-positive"></ion-nav-bar>
+
+<ion-nav-view></ion-nav-view>
+
+<script id="home.html" type="text/ng-template">
+
+    <ion-view class="product-view">
+
+        <ion-nav-title>
+            <span style="color:black">PRODOTTO</span>
+        </ion-nav-title>
+
+        <ion-content class="padding"
+                     id="content"
+                     on-swipe-up="onGesture('Swipe Up', 'product')"
+                     on-swipe-right="onGesture('Swipe Right', 'product')"
+                     on-swipe-down="onGesture('Swipe Down', 'product')"
+                     on-swipe-left="onGesture('Swipe Left', 'product')"
+                     on-hold="onGesture('Hold', 'product')"
+                     on-double-tap="onGesture('Double-Tap', 'product')"
+                     scroll="true">
+
+            <div class="row">
+                <div id="product-name" class="col col-100 product-name">NOME DEL PRODOTTO</div>
+            </div>
+
+            <div class="row no-padding">
+                <div id="product-image" class="col col-100 product-image">
+                    <img ng-src="http://bit.ly/1N3L2zX"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="product-mark" class="col col-100">Bollini: IGP DOP BIO ECC.</div>
+            </div>
+
+            <div class="row">
+                <div id="product-produttore" class="col col-100 product-info">PRODUTTORE: </div>
+            </div>
+
+            <div class="row">
+                <div id="product-territorio" class="col col-100 product-info">TERRITORIO: </div>
+            </div>
+
+            <div class="row">
+                <div id="product-stagione" class="col col-100 product-info">STAGIONE: </div>
+            </div>
+
+            <div class="row">
+                <div id="product-descrizione" class="col col-100">
+                    <p> Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto
+                        beatae vitae dicta sunt, explicabo. nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est,
+                        qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt,
+                        ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem
+                        ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit,
+                        qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
+                </div>
+            </div>
+
+            <!-- Esempi di variabili usate in angularjs
+            <h3 style="text-align: center;">Used touch gesture: {{gesture.used}}</h3>
+            <h2 style="text-align: center;">Id: {{id}}</h2>
+            -->
+        </ion-content>
+
+    </ion-view>
+</script>
+
+</body>
+
+</html>

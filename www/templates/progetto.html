@@ -1,0 +1,24 @@
+<ion-view view-title="{{labels['progetto']}}" ng-controller="ProgettoCtrl" class="progetto-view">
+    <ion-content class="padding">
+        <p class="progetto-logo"><img src="img/logo.png"></p>
+        <p ng-if = "lang=='it'"> PAPPAI nasce per valorizzare la qualità e genuinità dell'offerta agroalimentare della Sardegna e per offrire agli utenti e ai potenziali consumatori un servizio che li guidi, in base alle loro abitudini alimentari, nella scelta dei prodotti tipici sardi.</p>
+        <p ng-if = "lang=='it'">
+            Il Progetto, realizzato da Sardegna Ricerche con i fondi dell’Unione Europea – POR FESR Sardegna 2007-2013, ha previsto:
+            <ul ng-if = "lang=='it'">
+                <li>- una fase di confronto con i produttori sardi e i soggetti che a vario titolo operano nel settore agroalimentare</li>
+                <li>- la realizzazione della piattaforma web e della APP per la valorizzazione dei prodotti sardi</li>
+                <li>- attività di promozione e divulgazione</li>
+            </ul>
+        </p>
+        <p ng-if = "lang=='en'"> Pappai has been developed in order to enhance the quality and genuineness of the agro-food products from Sardinia and to provide users and potential consumers with a service which guides them in choosing Sardinian products, according to their dietary needs.</p>
+        <p ng-if = "lang=='en'">
+            The project, which has been carried out by Sardegna Ricerche with EC funds (ERDF ROP Sardinia 2007-2013) has involved:
+        <ul ng-if = "lang=='en'">
+            <li>- a phase of dialogue with agro-food producers and stakeholders;</li>
+            <li>- the development of a showcase of agro-food products accessible from web site and mobile device;</li>
+            <li>- promotion and dissemination activities.</li>
+        </ul>
+        </p>
+        <p><img src="img/footer-ras-progetto.jpg" alt="RAS"></p>
+    </ion-content>
+</ion-view>

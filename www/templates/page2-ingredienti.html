@@ -1,0 +1,57 @@
+<ion-view title='{{labels["prodotto"]}}' class="dettaglio-prodotto ingredienti-prodotto" cache-view="false">
+
+    <ion-content class="lateral-padding"
+                 ng-swipe-left="onSwipe('left', 'product1')"
+                 ng-swipe-right="onSwipe('right', 'product3')"
+                 scroll="true" ng-controller="Page2Ctrl">
+
+        <div ng-bind="nome" class="item title product-name name-2">
+        </div>
+
+        <!-- Lista ing -->
+        <img src="img/ingredienti.png" class="icona-ingredienti">
+        <h4 class="title lateral-padding">{{labels["ingredienti"]}}</h4>
+        <div ng-if="ingredienti.length>0">
+            <div ng-repeat="ing in ingredienti track by $index"
+                 class="lateral-padding product-ingr">
+                <ul class="elenco-ingr">
+                    <li ng-bind-html="ing"></li>
+                </ul>
+            </div>
+        </div>
+        <div ng-if="ingredienti.length==0">
+            <div class="lateral-padding product-ingr elenco-ingr">{{labels["non_presenti"]}}</div>
+        </div>
+        <img src="img/ricette.png" class="icona-ingredienti">
+        <h4 class="title lateral-padding">{{labels["ricette"]}}</h4>
+        <div ng-if="ricette.length>0">
+            <div ng-repeat="ric in ricette"
+                 class="lateral-padding product-ricetta product-ingr">
+                <ul class="elenco-ingr">
+                    <h5>{{ric.title}} </h5>
+                    <img ng-if="ric.field_immagine_ricetta.length>1" class="full-image" ng-src='{{ric.field_immagine_ricetta}}'>
+                    <li ng-if="ric.field_difficolt_.length>2"><span class="label-ricetta">{{labels["difficolta"]}}:</span> {{ric.field_difficolt_}} </li>
+                    <li ng-if="ric.field_tempo.length>2"><span class="label-ricetta">{{labels["tempo"]}}</span> {{ric.field_tempo}} </li>
+                    <li class="descrizione-ricetta">{{ric.body}} </li>
+                </ul>
+            </div>
+        </div>
+        <div ng-if="ricette.length==0">
+            <div class="lateral-padding product-ingr elenco-ingr">{{labels["non_presenti"]}}</div>
+        </div>
+
+        <img src="img/nutrizionali.png" class="icona-ingredienti icona-valnutr">
+        <h4 class="title lateral-padding">{{labels["valori_nutrizionali"]}}</h4>
+        <div ng-repeat="item_nv in nutritional_values track by $index"
+                       class="lateral-padding product-ingr">
+            <ul class="elenco-ingr">
+                <li>{{ item_nv.label }} <span ng-if="item_nv.value.length>0"> : {{ item_nv.value }} </span> </li>
+            </ul>
+        </div>
+
+    </ion-content>
+
+    <a class="left-arrow button icon icon-left ion-chevron-left" href="#/event/product1"></a>
+    <a class="right-arrow button icon icon-right ion-chevron-right" href="#/event/product3"></a>
+
+</ion-view>

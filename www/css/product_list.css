@@ -1,0 +1,53 @@
+ion-header-bar {
+    background-color: #B5832C !important;
+}
+
+.title-color {
+    color: #F5F8B1 !important;
+}
+
+.lista-prodotti ion-item.item.item-thumbnail-left
+{
+    border-color: #b5832c !important;
+}
+
+.lista-prodotti h3 {
+    color:#a81100;
+    margin:5px 0 !important;
+    padding:0 !important;
+    line-height: 17px !important;
+    font-size:12px !important;
+    white-space: normal !important;
+}
+
+.lista-prodotti h4 {
+    color:#666;
+    margin:0;
+    padding:0;
+}
+
+.lista-prodotti h5 {
+    color:#F5F8B1;
+    margin:2px 0;
+    padding:2px;
+    background-color:#B9832C !important;
+    float:left;
+}
+
+label.item.item-input {
+    background-color: #F5F8B1 !important;
+}
+.placeholder-icon{
+    color:#B9832C !important;
+}
+
+.placeholder-icon{
+    color:#B9832C !important;
+}
+
+.pull-title {
+    color: #666;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}

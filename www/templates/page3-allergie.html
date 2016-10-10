@@ -1,0 +1,48 @@
+<ion-view title='{{labels["prodotto"]}}' class="dettaglio-prodotto allergie-prodotto" cache-view="false">
+    <ion-content class="padding lateral-padding"
+                 ng-swipe-left="onSwipe('left', 'product2')"
+                 ng-swipe-right="onSwipe('right', 'product1')"
+                 scroll="true"
+                 ng-controller="Page3Ctrl">
+
+
+        <div ng-bind="nome" class="item title product-name">
+        </div>
+
+        <div ng-if="field_prodotto_a.length>0" class="padding product-info">
+            <h5>{{labels["luogo_produzione"]}} :</h5>
+            <span ng-bind="field_prodotto_a" id="product-prodotto-a"></span>
+        </div>
+        <div ng-if="field_marchio.length>0" class="padding product-info">
+            <h5>{{labels["marchi"]}}&nbsp:</h5>
+            <span ng-bind="field_marchio" id="product-marchi"></span>
+        </div>
+        <div ng-if="field_produttore.length>0" class="padding product-info">
+            <h5>{{labels["produttore"]}}&nbsp:</h5>
+            <span ng-bind="field_produttore" id="product-produttore"></span>
+        </div>
+        <div ng-if="field_tipologia_produzione.length>0" class="padding product-info">
+            <h5>{{labels["tipologia_produzione"]}}&nbsp:</h5>
+            <span ng-bind="field_tipologia_produzione" id="product-tipologia"></span>
+        </div>
+        <div ng-if="field_turismo_ed_eventi.length>0" class="padding product-info">
+            <h5>{{labels["turismo_eventi"]}} :</h5>
+            <span ng-bind-html="field_turismo_ed_eventi" id="product-turismo"></span>
+        </div>
+        <div ng-if="field_filiera_prodotto.length>0" class="padding product-info">
+            <h5>{{labels["filiera"]}}&nbsp:</h5>
+            <span ng-bind-html="field_filiera_prodotto" id="product-filiera"></span>
+        </div>
+        <div ng-if="field_storia.length>0" class="padding product-info">
+            <h5>{{labels["storia"]}}&nbsp:</h5>
+            <span ng-bind-html="field_storia" id="product-territorio"></span>
+        </div>
+        <div ng-if="field_tecniche_di_produzione.length>0" class="padding product-info">
+            <h5>{{labels["tecniche_produzione"]}}&nbsp:</h5>
+            <span ng-bind-html="field_tecniche_di_produzione" id="product-tecniche"></span>
+        </div>
+    </ion-content>
+
+    <a class="left-arrow button icon icon-left ion-chevron-left" href="#/event/product2"></a>
+
+</ion-view>

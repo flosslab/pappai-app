@@ -1,0 +1,18 @@
+<ion-view view-title="{{labels['guida']}}" ng-controller="HelpController" class="help-view">
+  <ion-content class="configura-view">
+      <p class="help-logo"><img src="img/logotype-pappai.png"></p>
+      <h4 class="help-list"><img src="img/scansiona.png">{{labels['scansiona']}}</h4>
+      <p>{{labels['scopri_testo']}}</p>
+
+      <h4 class="help-list"><img src="img/personalizza.png">{{labels['personalizza']}}</h4>
+      <p>{{labels['personalizza_testo']}}</p>
+
+      <h4 class="help-list"><img src="img/naviga.png">{{labels['naviga']}}</h4>
+      <p>{{labels['naviga_testo']}}</p>
+
+      <div class="help-button">
+        <button class="button button-assertive button-personalizza" ng-click="openPersonalizzaPage()">{{labels['personalizza']}}</button>
+      </div>
+  </ion-content>
+</ion-view>
+

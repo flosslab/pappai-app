@@ -1,0 +1,54 @@
+<ion-view title='{{labels["prodotto"]}}' class="dettaglio-prodotto" cache-view="false">
+    <ion-content class="padding right-padding"
+                 ng-swipe-left="onSwipe('left', 'product3')"
+                 ng-swipe-right="onSwipe('right', 'product2')"
+                 scroll="true"
+                 ng-controller="Page1Ctrl">
+
+        <!-- The content of the page -->
+        <div ng-bind="product.title" id="product-name" class="item title product-name">
+        </div>
+
+        <div class="padding product-info">
+            <h5>{{labels["allergie"]}}</h5>
+            <div ng-if="allerg.length>0">
+                <ion-list class="allergie-prodotto">
+                    <ion-item ng-repeat="item in allerg">
+                        <div class="allergie-label col-75">{{item[0]}}</div><div class="indicatore  col-25" ng-class="item[1]"></div>
+                       <!--<i class="button button-circle-tracce" on-icon="button-circle-presenza" off-icon="button-circle-tracce" id="{{item}}" icon-switcher ></i>-->
+                    </ion-item>
+                </ion-list>
+            </div>
+            <span ng-if="allerg.length==0">
+                {{labels["nessun_allergene"]}}
+            </span>
+        </div>
+
+        <div class="padding product-info">
+            <h5>{{labels["abitudine"]}}</h5>
+            <p ng-bind="abitudine_alimentare" id="product-abitudine">
+            </p>
+        </div>
+
+        <div ng-if="product.field_porzione.length>2" class="padding product-info">
+            <h5>{{labels["perc_calorie"]}}</h5>
+            <p>{{porzione_descrizione}} {{labels["porzione_contiene"]}} {{perc_calorie}}% {{labels["valore_giornaliero_riferimento"]}}
+            <progress max="100" value="{{perc_calorie}}"></progress>
+            <p></p>
+        </div>
+
+        <div class="item">
+            <img class="full-image" src='{{product.field_immagine_copertina}}'>
+        </div>
+
+        <div class="padding product-info">
+            <h5>{{labels["descrizione"]}}</h5>
+            <p ng-bind="product.body" id="product-descrizione"> descrizione
+            </p>
+        </div>
+
+    </ion-content>
+
+    <a class="right-arrow button icon icon-right ion-chevron-right" href="#/event/product2"></a>
+
+</ion-view>

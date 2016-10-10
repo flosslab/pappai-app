@@ -1,0 +1,51 @@
+$app-green: #9ACD34;
+
+// Import Oswald font
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald'), local('Oswald'), url(http://fonts.gstatic.com/s/oswald/v10/Qw6_9HvXRQGg5mMbFR3Phn-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+}
+
+html,
+body {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+// Set green color for nav-bar
+.nav-bar-style {
+  background-color: $app-green !important;
+}
+.nav-bar-title-style {
+  color: black !important;
+}
+
+.button-circle-presenza {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: #a81100 !important;
+}
+
+.button-circle-tracce {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: #B5832C !important
+
+}
+
+.button-circle {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: #ccc !important;
+}
+
+@import "ionic/ionic";
+
+//@import "ionic/ionic.css";
+// your slick styles can go here...
+// when Sass processes, both Ionic's Sass and your Sass will combine
+// into one file and saved in your app's directory as css/app.css

@@ -1,0 +1,95 @@
+<ion-view title='{{labels["home"]}}'>
+
+    <ion-content scroll="false" padding="false" class="dashboard-content"
+                 ng-swipe-left="onSwipe('left')"
+                 ng-controller="MainCtrl" >
+        <!-- Scansione prodotto -->
+        <div class="row-one">
+
+            <div class="row">
+
+                <div class="col col-30 outer-container" ng-click="openBarcodeScanner()" transitiontype="fade" direction="left" go-native>
+                    <div class="inner-container">
+                        <img class="img-buttons" ng-src="{{ 'img/scopri.png' }}">
+                        <h2 class="link-home">{{labels['scopri']}}</h2>
+                    </div>
+                </div>
+
+                <div class="col col-40 col-center">
+                    <img class="img-logo" ng-src="{{ 'img/logo.png' }}">
+                </div>
+
+                <div class="col col-30 outer-container" onclick="openProductList()" transitiontype="fade" direction="left" go-native>
+                    <div class="inner-container">
+                        <img class="img-buttons" ng-src="{{ 'img/naviga.png' }}">
+                        <h2 class="link-home">{{labels['naviga']}}</h2>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Prodotto principale -->
+        <div class="row row-main-prod no-padding row-dashboard">
+            <div ng-if="productsVr.length > 0" class="col col-50 no-padding" ng-click="openProductPage(productsVr[0].nid)">
+                <img class="img-main-prod" ng-if="productsVr[0].field_immagine_copertina != 'nd'" ng-src="{{productsVr[0].field_immagine_copertina}}">
+            </div>
+            <div ng-if="productsVr.length > 0" class="col col-50 no-padding sec-prod" >
+                <div class="row row-main-prod no-padding">
+                    <div class="col no-padding sec-prod" ng-click="openProductPage(productsHr[0].nid)">
+                        <img class="img-sec-prod" ng-if="productsHr[0].field_immagine_copertina != 'nd'" ng-src="{{productsHr[0].field_immagine_copertina}}">
+                    </div>
+                </div>
+                <div class="row row-main-prod no-padding">
+                    <div class="col no-padding sec-prod" ng-click="openProductPage(productsHr[1].nid)">
+                        <img class="img-sec-prod"  ng-if="productsHr[1].field_immagine_copertina != 'nd'" ng-src="{{productsHr[1].field_immagine_copertina}}">
+                    </div>
+                </div>
+                <div class="row row-main-prod no-padding">
+                    <div class="col no-padding sec-prod" ng-click="openProductPage(productsHr[2].nid)">
+                        <img class="img-sec-prod"  ng-if="productsHr[2].field_immagine_copertina != 'nd'" ng-src="{{productsHr[2].field_immagine_copertina}}">
+                    </div>
+                </div>
+            </div>
+
+                <div ng-if="productsVr.length == 0" class="col col-50 no-padding sec-prod" >
+                    <div class="row row-main-prod no-padding">
+                        <div class="col no-padding sec-prod" ng-click="openProductPage(productsHr[0].nid)">
+                            <img class="img-sec-prod" ng-if="productsHr[0].field_immagine_copertina != 'nd'" ng-src="{{productsHr[0].field_immagine_copertina}}">
+                        </div>
+                    </div>
+                    <div class="row row-main-prod no-padding">
+                        <div class="col no-padding sec-prod" ng-click="openProductPage(products[1].nid)">
+                            <img class="img-sec-prod"  ng-if="productsHr[1].field_immagine_copertina != 'nd'" ng-src="{{productsHr[1].field_immagine_copertina}}">
+                        </div>
+                    </div>
+                    <div class="row row-main-prod no-padding">
+                        <div class="col no-padding sec-prod" ng-click="openProductPage(products[2].nid)">
+                            <img class="img-sec-prod"  ng-if="productsHr[2].field_immagine_copertina != 'nd'" ng-src="{{productsHr[2].field_immagine_copertina}}">
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="productsVr.length == 0" class="col col-50 no-padding sec-prod" >
+                    <div class="row row-main-prod no-padding">
+                        <div class="col no-padding sec-prod" ng-click="openProductPage(productsHr[3].nid)">
+                            <img class="img-sec-prod" ng-if="productsHr[3].field_immagine_copertina != 'nd'" ng-src="{{productsHr[3].field_immagine_copertina}}">
+                        </div>
+                    </div>
+                    <div class="row row-main-prod no-padding">
+                        <div class="col no-padding sec-prod" ng-click="openProductPage(productsHr[4].nid)">
+                            <img class="img-sec-prod"  ng-if="productsHr[4].field_immagine_copertina != 'nd'" ng-src="{{productsHr[4].field_immagine_copertina}}">
+                        </div>
+                    </div>
+                    <div class="row row-main-prod no-padding">
+                        <div class="col no-padding sec-prod" ng-click="openProductPage(productsHr[5].nid)">
+                            <img class="img-sec-prod"  ng-if="productsHr[5].field_immagine_copertina != 'nd'" ng-src="{{productsHr[5].field_immagine_copertina}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-view>

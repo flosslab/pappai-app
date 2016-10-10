@@ -1,0 +1,74 @@
+<ion-view view-title="{{labels['personalizza']}}" >
+    <ion-content ng-controller="SavePreferencesCtrl as save">
+
+        <div class="list">
+               <label class="item item-input item-select">
+                    <div class="input-label">
+                        Language
+                    </div>
+                   <select data-ng-options="item.name for item in list_lang track by item.id" data-ng-model="save.langApp" ng-change="save.updateLang()"></select>
+                </label>
+
+                <div class="item item-divider">
+                    {{labels["gda"]}}
+                </div>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        {{labels["gda_label"]}}
+                    </div>
+                    <select id="selectclass" data-ng-options="item.name for item in lista_classeCal track by item.id" data-ng-model="save.classeCal" ng-change="save.updateClasseCal()"></select>
+                </label>
+
+            <div class="item item-divider">
+                {{labels["abitudine"]}}
+            </div>
+            <ion-toggle ng-repeat="item in list_abitudine track by $index"
+                        ng-model="save.abitudine[$index]"
+                        ng-change="save.updateAbitudine(item)"
+                        toggle-class="toggle-assertive" class="toggle-abitudine"
+                        ng-disabled="abitEnabled[$index]">
+                {{item.value}}
+            </ion-toggle>
+
+            <div class="item item-divider">
+                {{labels["allergie"]}}
+            </div>
+            <ion-toggle ng-repeat="item in list_allergie track by $index"
+                        ng-model="save.allergie[$index]"
+                        ng-change="save.updateAllergie(item)"
+                        toggle-class="toggle-assertive" class="toggle-allergie">
+                {{item.value}}
+            </ion-toggle>
+            <div style="height: 60px;">
+
+            </div>
+            <!--
+            <div class="item item-divider">
+                {{labels["categoria"]}}
+            </div>
+            <ion-toggle ng-repeat="item in list_tipo track by $index"
+                        ng-model="save.tipo[$index]"
+                        ng-change="save.updateTipo(item)"
+                        toggle-class="toggle-assertive" class="toggle-tipo">
+                {{item.value}}
+            </ion-toggle>
+            <div class="item item-divider">
+                Stato toggles abilitati
+            </div>
+
+            <div class="item">
+                <pre ng-bind="list_abitudine | json"></pre>
+                <pre ng-bind="main.abitudine | json"></pre>
+            </div>
+            -->
+
+        </div>
+    </ion-content>
+    <div class="bottom-bar-personalizza">
+        <p>
+            <div class="help-button">
+                <a class="button button-assertive button-personalizza" href="#/event/home">{{labels['gotohome']}}</a>
+            </div>
+        </p>
+    </div>
+</ion-view>

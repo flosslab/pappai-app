@@ -1,0 +1,25 @@
+<ion-view title='{{labels["scopri"]}}' class="lista-prodotti">
+    <ion-content ng-controller="ProductListController">
+
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="prod.title" ng-change="searchProduct()">
+        </label>
+        <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
+        </ion-refresher>
+        <h6 class="title pull-title">Pull to Refresh!</h6>
+        <ion-list>
+            <ion-item ng-repeat="prod in products"
+                      item="prod"
+                      ng-click="openProductPage(prod.nid)"
+                      class="item item-thumbnail-left">
+                    <img ng-if="prod.field_immagine_copertina == 'nd'" src="img/logo.png" alt="PAPPAI">
+                    <img ng-if="prod.field_immagine_copertina != 'nd'" ng-src="{{prod.field_immagine_copertina}}">
+                <h3 class="title">{{ prod.title }}</h3>
+                <h4>{{ prod.field_produttore }}</h4>
+                <h5>{{ prod.field_tipologia }}</h5>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll on-infinite="loadMore()" icon="ion-loading-c" distance="5%" ng-if="canWeLoadMoreProducts()"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>
